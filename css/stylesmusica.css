@@ -1,0 +1,299 @@
+@import url('https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap');
+
+/* --- Estilos Generales --- */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "MedievalSharp", cursive;
+    background-image: url('../img/fondo2.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    
+    /* Propiedades para que el footer funcione */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex-grow: 1;
+    padding-top: 80px;
+}
+
+/* --- Estilos de la Página de Cursos (Música) --- */
+.pagina-musica {
+    background-image: url('../img/fondo6.png'); 
+    background-color: red; 
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+/* --- Navegación --- */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(34, 34, 34, 0.7);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+}
+
+.menu-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+#main-opciones,
+#main-redes {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#main-opciones li {
+    margin-right: 25px;
+}
+
+#main-opciones li a,
+#main-redes li a {
+    text-decoration: none;
+    color: #f5f5f5;
+    transition: color 0.3s ease, font-size 0.3s ease;
+}
+
+#main-opciones li a {
+    font-size: 22px;
+}
+
+#main-opciones li a:hover {
+    color: #007bff;
+    font-size: 24px;
+}
+
+#main-redes li a i {
+    font-size: 30px;
+    transition: color 0.3s ease, font-size 0.3s ease;
+}
+
+#main-redes li a i:hover {
+    color: #007bff;
+    font-size: 32px;
+}
+
+.menu-toggle {
+    border: none;
+    background: none;
+    box-shadow: none;
+    color: #f5f5f5;
+    cursor: pointer;
+    font-size: 2rem;
+    padding: 0;
+    margin: 0;
+    display: none;
+}
+
+/* --- Sección de Música --- */
+.seccion-musica {
+    display: block;
+    padding: 25px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contenedor-musica {
+    display: flex;
+    justify-content: center;
+    align-items: stretch; 
+    gap: 40px;
+}
+
+.seccion-musica h2 {
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    color: #fff;
+    text-align: center;
+    font-size: 2.5em;
+    text-shadow: 0 0 10px #00aeff, 0 0 20px #00aeff, 0 0 30px #00aeff;
+}
+
+.bateria,
+.spotify-playlists {
+    flex: 1; 
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    text-align: center;
+    color: white;
+}
+
+.bateria {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.spotify-playlists {
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+}
+
+.bateria img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.spotify-playlists h3 {
+    color: #fff;
+    text-align: center;
+    font-size: 2.5em;
+    text-shadow: 0 0 10px #00aeff, 0 0 20px #00aeff, 0 0 30px #00aeff;
+}
+
+.spotify-playlists p, .bateria p {
+    font-size: 1.5em;
+}
+
+.spotify-playlists iframe {
+    flex-grow: 1;
+    height: auto;
+    border-radius: 12px;
+}
+
+/* --- Estilos para el Carrusel --- */
+.carrusel-contenedor {
+    position: relative;
+    width: 100%;
+    max-width: 450px;
+    margin: 0 auto 20px;
+    overflow: hidden; 
+    border-radius: 10px;
+}
+
+.carrusel-imagenes {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carrusel-imagenes img {
+    width: 100%;
+    display: block;
+    flex-shrink: 0;
+    object-fit: cover;
+}
+
+.carrusel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.carrusel-btn.prev {
+    left: 10px;
+}
+
+.carrusel-btn.next {
+    right: 10px;
+}
+
+.carrusel-puntos {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.punto {
+    height: 15px;
+    width: 15px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.punto.activo {
+    background-color: #717171;
+}
+
+
+/* Animación */
+.animated-section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 3s ease, transform 3s ease;
+}
+
+.animated-section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+footer {
+    background-color: rgba(34, 34, 34, 0.7);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    text-align: center;
+    color: #f5f5f5;
+    font-size: 0.9em;
+    width: 100%;
+}
+
+
+.footer-contenido {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-contenido p {
+    margin: 5px 0;
+}
+
+.footer-contenido a {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-contenido a:hover {
+    color: #f5f5f5;
+    text-decoration: underline;
+}
+.todo-el-contenido{
+    display: grid;
+    min-height: 100dhv;
+    grid-template-rows: auto 1fr;
+
+}
+/* --- Media Queries (Móvil) --- */
+@media (max-width: 768px) {
+    .contenedor-musica {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .bateria,
+    .spotify-playlists {
+        width: 100%;
+        text-align: center;
+    }
+}
+

@@ -39,16 +39,7 @@ footer {
     align-items: flex-end;
 }
 
-.pagina-competitivo{
 
-    background-color: red; 
-    background-image: url('../img/fondo3.png'); 
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center ;
-    padding-top: 80px; 
-}
 .pagina-contactos{
 
     background-color: red; 
@@ -138,7 +129,7 @@ nav {
 
 /* --- Sección Principal (Contenido) --- */
 section {
-    height: 100vh;
+    height: 100dvh;
     width: 100%;
     display: flex;
     align-items: center;
@@ -290,108 +281,9 @@ section {
     }
 }
 
-.seccion-dos-columnas {
-    display: block;
-    justify-content: center;
-    align-items: stretch;
-    gap: 40px;
-    padding: 25px;
-    max-height: 600px;
-}
-
-/* --- Estilos para las Columnas --- */
-.columna-izquierda {
-    flex: 1;
-    padding: 20px;
-    border-radius: 10px;
-   
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-    text-align: center;
-    align-self: center;
-}
-
-.columna-izquierda {
-  
-    background-color: rgba(0, 0, 0, 0.6);
-
-    border: 2px solid rgba(255, 255, 255, 0.2);
-}
 
 
-/* --- Estilos para el Título (h1) --- */
-.columna-izquierda h1 {
-    color: #fff;
-    font-size: 2.5em;
-    margin-bottom: 40px;
-    text-shadow: 0 0 10px #00aeff, 0 0 20px #00aeff, 0 0 30px #00aeff;
-}
 
-
-.columna-izquierda p {
-    color: rgb(199, 197, 197); 
-    font-size: 1.8em;
-    font-weight: bold;
-   
-
-}
-
-
-/* --- Sección de Juegos --- */
-.seccion-juegos {
-    
-    display: block;
-    padding: 25px;
-   
-    margin: 0 auto;
-    text-align: center;
-}
-.seccion-juegos h2 {
-   
-    color: #fff;
-    font-size: 2.5em;
-    margin-bottom: 40px;
-    text-shadow: 0 0 10px #00aeff, 0 0 20px #00aeff, 0 0 30px #00aeff;
-}
-
-.contenedor-juegos {
-    display: flex; 
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 40px;
-   
-    
-   
-}
-
-
-.juego {
-    flex: 1 1 300px; 
-    background-color: rgba(0, 0, 0, 0.6);
-    border: 2px solid rgba(255, 255, 255, 0.2);
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-    color: white;
-    text-align: center;
-}
-
-.juego h3 {
-    color: #ffd700;
-    font-size: 1.8em;
-    margin-top: 0;
-}
-
-.juego img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-    margin-bottom: 15px;
-}
-
-.juego p {
-    font-size: 1em;
-}
 
 /*animacion*/
 .animated-section {
@@ -485,42 +377,7 @@ section {
 
 @media (max-width: 768px) {
 
-    .seccion-dos-columnas {
-        flex-direction: column;
-        padding: 20px;
-        gap: 20px;
-
-        max-height: none; 
-    }
-
-    .columna-izquierda{
-
-        width: 100%;
-
-        text-align: center;
-        align-self: auto;
-    }
-
-    .columna-izquierda h1 {
-        font-size: 1.8em;
-    }
-
-    .columna-izquierda p {
-        font-size: 1.2em;
-    }
-
-    /* --- Estilos para la Sección de Juegos --- */
-    .contenedor-juegos {
-        flex-direction: column;
-        gap: 20px;
-    }
-    
-    .juego {
-        width: 100%;
-        flex-basis: auto; 
-        text-align: center;
-        padding: 20px;
-    }
+  
 
     /* --- Estilos para la Sección de Música --- */
     .contenedor-musica {
@@ -534,14 +391,6 @@ section {
      
         text-align: center;
     }
-
-    .juego iframe { 
-        width: 100%; 
-        height: auto; 
-        max-height: 250px; 
-        aspect-ratio: 16 / 9; 
-   
-}
 }
 
 .pagina-cursos{
@@ -733,4 +582,10 @@ section {
 .footer-contenido a:hover {
     color: #f5f5f5;
     text-decoration: underline;
+}
+.todo-el-contenido{
+    display: grid;
+    min-height: 100dhv;
+    grid-template-rows: auto 1fr;
+
 }

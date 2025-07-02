@@ -1,0 +1,303 @@
+@import url('https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap');
+
+/* --- Estilos Generales --- */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "MedievalSharp", cursive;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    
+    /* Propiedades para un footer fijo en la parte inferior de la página */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex-grow: 1;
+    padding-top: 80px; /* Espacio para la barra de navegación fija */
+}
+
+/* --- Estilos de la Página Competitiva --- */
+.pagina-competitivo {
+    background-color: red;
+    background-image: url('../img/fondo3.png');
+}
+
+.seccion-presentacion-competitivo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+}
+
+.columna-izquierda {
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.6);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.columna-izquierda h1 {
+    color: #fff;
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    text-shadow: 0 0 10px #00aeff, 0 0 20px #00aeff, 0 0 30px #00aeff;
+}
+
+.columna-izquierda p {
+    color: rgb(199, 197, 197);
+    font-size: 1.8em;
+    font-weight: bold;
+}
+
+/* --- Navegación --- */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(34, 34, 34, 0.7);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+}
+
+.menu-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+#main-opciones,
+#main-redes {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#main-opciones li {
+    margin-right: 25px;
+}
+
+#main-opciones li a,
+#main-redes li a {
+    text-decoration: none;
+    color: #f5f5f5;
+    transition: color 0.3s ease, font-size 0.3s ease;
+}
+
+#main-opciones li a {
+    font-size: 22px;
+}
+
+#main-opciones li a:hover {
+    color: #007bff;
+    font-size: 24px;
+}
+
+#main-redes li a i {
+    font-size: 30px;
+    transition: color 0.3s ease, font-size 0.3s ease;
+}
+
+#main-redes li a i:hover {
+    color: #007bff;
+    font-size: 32px;
+}
+
+.menu-toggle {
+    border: none;
+    background: none;
+    box-shadow: none;
+    color: #f5f5f5;
+    cursor: pointer;
+    font-size: 2rem;
+    padding: 0;
+    margin: 0;
+    display: none;
+}
+
+/* Animación */
+.animated-section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 3s ease, transform 3s ease;
+}
+
+.animated-section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* --- Footer --- */
+footer {
+    background-color: rgba(34, 34, 34, 0.7);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    text-align: center;
+    color: #f5f5f5;
+    font-size: 0.9em;
+    width: 100%;
+}
+
+.footer-contenido {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-contenido p {
+    margin: 5px 0;
+}
+
+.footer-contenido a {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-contenido a:hover {
+    color: #f5f5f5;
+    text-decoration: underline;
+}
+
+/* Media Queries (Móvil) */
+@media (max-width: 768px) {
+    nav {
+        padding: 10px 20px;
+    }
+
+    .menu-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .menu-container {
+        display: none;
+    }
+
+    .menu-container.visible {
+        display: block;
+        position: absolute;
+        top: 100px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        background-color: rgba(34, 34, 34, 0.7);
+        backdrop-filter: blur(10px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        z-index: 999;
+    }
+
+    #main-opciones {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding: 20px 0;
+    }
+
+    #main-opciones li {
+        margin-right: 0;
+        margin-bottom: 25px;
+    }
+
+    .seccion-presentacion-competitivo {
+        flex-direction: column;
+        padding: 20px;
+        gap: 20px;
+    }
+
+    .columna-izquierda {
+        width: 100%;
+        text-align: center;
+        align-self: auto;
+    }
+
+    .columna-izquierda h1 {
+        font-size: 1.8em;
+    }
+
+    .columna-izquierda p {
+        font-size: 1.2em;
+    }
+}
+/* --- Sección de Juegos --- */
+.seccion-juegos {
+    display: block;
+    padding: 25px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.seccion-juegos h2 {
+    color: #fff;
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    text-shadow: 0 0 10px #00aeff, 0 0 20px #00aeff, 0 0 30px #00aeff;
+}
+
+.contenedor-juegos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.juego {
+    flex: 1 1 300px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    color: white;
+    text-align: center;
+}
+
+.juego h3 {
+    color: #ffd700;
+    font-size: 1.8em;
+    margin-top: 0;
+}
+
+.juego p {
+    font-size: 1em;
+}
+
+.juego iframe {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    border-radius: 8px;
+}
+
+/* Media Queries (Móvil) para la sección de juegos */
+@media (max-width: 768px) {
+    .contenedor-juegos {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .juego {
+        width: 100%;
+        flex-basis: auto;
+        text-align: center;
+        padding: 20px;
+    }
+}
