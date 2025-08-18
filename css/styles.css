@@ -214,8 +214,11 @@ section {
         align-items: center;
         width: 100%;
         padding: 20px 0;
-        margin: 20px;
 
+    }
+    #main-opciones li {
+        margin-right: 0; /* Asegúrate de que no haya margen horizontal en móviles */
+        margin-bottom: 25px; /* Crea un espacio de 25px entre cada opción */
     }
     
     section {
