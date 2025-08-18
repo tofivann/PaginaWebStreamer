@@ -214,7 +214,7 @@ section {
         align-items: center;
         width: 100%;
         padding: 20px 0;
-        margin: 10px;
+        margin: 20px;
 
     }
     
@@ -236,6 +236,6 @@ section {
     }
 
     .animacion-ola span {
-        font-size: 1em;
+        font-size: 0.8em;
     }
 }
