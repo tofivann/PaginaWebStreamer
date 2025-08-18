@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Libertinus+Serif:wght@600&family=Roboto+Slab:wght@100..900&display=swap');
+
+/* --- Estilos Generales --- */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0; 
+    font-family: "Libertinus Serif", serif;
+    background-color: red; /* Este color es un fallback si la imagen no carga */
+    background-image: url('../img/fondo2.png'); 
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center bottom;
+    padding-top: 80px; 
+}
+
+main {
+    position: relative;
+    top: 80px; 
+}
+
+/* --- Navegación --- */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(34, 34, 34, 0.7);
+    backdrop-filter: blur(10px);
+}
+
+.menu-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+#main-opciones,
+#main-redes {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#main-opciones li {
+    margin-right: 25px;
+}
+
+#main-opciones li a,
+#main-redes li a {
+    text-decoration: none;
+    color: #f5f5f5;
+    transition: color 0.3s ease, font-size 0.3s ease;
+}
+
+#main-opciones li a {
+    font-size: 22px;
+}
+
+#main-opciones li a:hover {
+    color: #007bff;
+    font-size: 24px;
+}
+
+#main-redes li a i {
+    font-size: 30px;
+    transition: color 0.3s ease, font-size 0.3s ease;
+}
+
+#main-redes li a i:hover {
+    color: #007bff;
+    font-size: 32px;
+}
+
+.menu-toggle {
+    border: none;
+    background: none;
+    box-shadow: none;
+    color: #f5f5f5;
+    cursor: pointer;
+    font-size: 2rem;
+    padding: 0;
+    margin: 0;
+    display: none;
+}
+
+/* --- Sección Principal (Contenido) --- */
+section {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+
+#contenido-index {
+    /* Estado inicial: oculto y con transición */
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease, transform 1s ease;
+
+    /* Propiedades de Flexbox para alinear el contenido */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    
+    /* Elimina el padding superior para pegar la imagen al borde */
+    padding: 0 20px;
+}
+
+#contenido-index.visible {
+    /* Estado final: visible y en su lugar */
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* --- Estilos de la Animación de Ola --- */
+@keyframes latido {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+}
+
+.animacion-ola span {
+    display: inline-block;
+    animation: latido 1.5s infinite;
+    font-size: 1.5em;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+/* --- Estilos de Párrafo y Texto Secundario --- */
+#contenido-index p {
+    color: #f5f5f5;
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.mensaje-secundario {
+    color: #f5f5f5;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+/* --- Estilos del Botón --- */
+#boton-index {
+    padding: 10px 30px;
+    border-radius: 50px; 
+    background-color: #007bff;
+    color: #f5f5f5;
+    cursor: pointer;
+    font-size: 1em; 
+    transition: background-color 0.3s ease, color 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+#boton-index:hover {
+    background-color: #f5f5f5;
+    color: #007bff; 
+}
+
+#boton-index i {
+    margin-right: 5px;
+}
+
+/* --- Media Queries (Móvil) --- */
+@media (max-width: 768px) {
+    nav {
+        padding: 10px 20px;
+    }
+
+    .menu-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .menu-container {
+        display: none;
+    }
+
+    .menu-container.visible {
+        display: block;
+        position: absolute;
+        top: 100px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        background-color: rgba(34, 34, 34, 0.7);
+        backdrop-filter: blur(10px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+        z-index: 999;
+    }
+
+    #main-opciones {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding: 20px 0;
+    }
+    
+    section {
+        flex-direction: column;
+        height: auto;
+        padding: 20px;
+    }
+
+    #contenido-index {
+        flex: auto;
+        width: 100%;
+        margin: 0;
+    }
+    
+    #contenido-index img {
+        width: 100%;
+        height: auto;
+    }
+
+    .animacion-ola span {
+        font-size: 1em;
+    }
+}
