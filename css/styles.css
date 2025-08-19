@@ -16,6 +16,19 @@ body {
     background-position: center bottom;
     padding-top: 80px; 
 }
+.pagina-competitivo{
+
+    margin: 0;
+    padding: 0; 
+
+    background-color: red; /* Este color es un fallback si la imagen no carga */
+    background-image: url('../img/fondo3.png'); 
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center bottom;
+    padding-top: 80px; 
+}
 
 main {
     position: relative;
