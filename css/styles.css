@@ -18,15 +18,12 @@ body {
 }
 .pagina-competitivo{
 
-    margin: 0;
-    padding: 0; 
-
     background-color: red; /* Este color es un fallback si la imagen no carga */
     background-image: url('../img/fondo3.png'); 
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    background-position: center bottom;
+    background-position: center ;
     padding-top: 80px; 
 }
 
@@ -253,5 +250,221 @@ section {
 
     .animacion-ola span {
         font-size: 0.8em;
+    }
+}
+/* --- Sección de Presentación (dos columnas) --- */
+.seccion-dos-columnas {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 40px;
+    
+    /* Disminuye el espacio vertical entre secciones */
+    padding: 25px;
+    max-height: 600px;
+}
+
+/* --- Estilos para las Columnas --- */
+.columna-izquierda,
+.columna-derecha {
+    flex: 1; /* Ocupan el mismo ancho */
+    padding: 20px;
+    border-radius: 10px;
+    /* Sombras para dar un efecto de profundidad */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    align-self: center;
+}
+
+.columna-izquierda {
+    /* Fondo oscuro y semitransparente */
+    background-color: rgba(0, 0, 0, 0.6);
+    /* Borde para un estilo más definido */
+    border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.columna-derecha {
+    /* Aquí podrías añadir un fondo si fuera necesario, pero lo dejaremos vacío para el video */
+    background-color: transparent;
+}
+/* --- Estilos para el Título (h1) --- */
+.columna-izquierda h1 {
+    color: #00aeff; /* Un color dorado para el texto brillante */
+    font-size: 2.5em;
+    font-weight: bold;
+    /* Sombra de texto para un efecto de brillo */
+    text-shadow: 0 0 10px #02014d, 0 0 20px #02014d, 0 0 30px #02014d;
+}
+.columna-izquierda p {
+    color: rgb(199, 197, 197); /* Un color dorado para el texto brillante */
+    font-size: 1.8em;
+    font-weight: bold;
+    /* Sombra de texto para un efecto de brillo */
+    text-shadow: 0 0 10px #ffd700, 0 0 20px #ffd700, 0 0 30px #ffd700;
+}
+
+/* --- Estilos para el Contenedor del Video --- */
+#reproductor-twitch {
+    /* Esto es crucial para que el video se adapte a su espacio */
+    width: 100%;
+    /* Mantén una relación de aspecto 16:9, ideal para videos */
+    aspect-ratio: 16 / 9;
+}
+
+
+/* --- Sección de Juegos --- */
+.seccion-juegos {
+    padding: 25px;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+.seccion-juegos h2 {
+    color: #fff;
+    font-size: 2.5em;
+    margin-bottom: 40px; /* Espacio debajo del título de la sección */
+    text-shadow: 0 0 10px #00aeff, 0 0 20px #00aeff, 0 0 30px #00aeff;
+}
+
+.contenedor-juegos {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap; /* Permite que los elementos pasen a la siguiente línea */
+    gap: 40px; /* Espacio entre las tarjetas de juego */
+}
+
+.juego {
+    flex: 1 1 300px; /* Un valor flexible para el tamaño de las tarjetas */
+    background-color: rgba(0, 0, 0, 0.6);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    color: white;
+    text-align: center;
+}
+
+.juego h3 {
+    color: #ffd700;
+    font-size: 1.8em;
+    margin-top: 0;
+}
+
+.juego img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.juego p {
+    font-size: 1em;
+}
+
+/* --- Sección de Música --- */
+.seccion-musica {
+    
+    padding: 25px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.contenedor-musica {
+    display: flex;
+    justify-content: center;
+    align-items: stretch; /* Estira las columnas para que tengan la misma altura */
+    gap: 40px;
+}
+
+.bateria,
+.spotify-playlists {
+    flex: 1;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.bateria {
+    /* Fondo oscuro y semitransparente para la columna de la batería */
+    background-color: rgba(0, 0, 0, 0.6);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    text-align: center;
+    color: white;
+}
+
+.spotify-playlists {
+    /* Columna del reproductor de Spotify con fondo transparente */
+    background-color: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    text-align: center;
+    color: white;
+}
+
+.bateria img {
+    max-width: 100%; /* Asegura que la imagen no se desborde */
+    height: auto;
+    border-radius: 8px;
+}
+
+.seccion-musica h2 {
+    color: #fff;
+    text-align: center;
+    font-size: 2.5em;
+    text-shadow: 0 0 10px #00aeff, 0 0 20px #00aeff, 0 0 30px #00aeff;
+}
+
+.spotify-playlists h3 {
+    color: #fff;
+}
+
+@media (max-width: 768px) {
+    /* --- Estilos para la Sección de Presentación --- */
+    .seccion-dos-columnas {
+        flex-direction: column;
+        padding: 20px;
+        gap: 20px;
+        max-height: none; /* Elimina la altura máxima en móviles */
+    }
+
+    .columna-izquierda,
+    .columna-derecha {
+        width: 100%;
+        /* Alinea el texto al centro */
+        text-align: center;
+        align-self: auto;
+    }
+
+    .columna-izquierda h1 {
+        font-size: 1.8em;
+    }
+
+    .columna-izquierda p {
+        font-size: 1.2em;
+    }
+
+    /* --- Estilos para la Sección de Juegos --- */
+    .contenedor-juegos {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .juego {
+        width: 100%;
+        flex-basis: auto; /* Permite que el ancho se ajuste automáticamente */
+        /* Asegura que el texto dentro de la tarjeta esté centrado */
+        text-align: center;
+    }
+
+    /* --- Estilos para la Sección de Música --- */
+    .contenedor-musica {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .bateria,
+    .spotify-playlists {
+        width: 100%;
+        /* Asegura que el texto esté centrado en ambos bloques */
+        text-align: center;
     }
 }
