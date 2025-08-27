@@ -252,14 +252,12 @@ section {
         font-size: 0.8em;
     }
 }
-/* --- Sección de Presentación (dos columnas) --- */
+
 .seccion-dos-columnas {
-    display: flex;
+    display: flex; /* Correcto, porque alinea las dos columnas */
     justify-content: center;
     align-items: stretch;
     gap: 40px;
-    
-    /* Disminuye el espacio vertical entre secciones */
     padding: 25px;
     max-height: 600px;
 }
@@ -284,23 +282,31 @@ section {
 }
 
 .columna-derecha {
-    /* Aquí podrías añadir un fondo si fuera necesario, pero lo dejaremos vacío para el video */
-    background-color: transparent;
+  /* Fondo oscuro y semitransparente */
+    background-color: rgba(0, 0, 0, 0.6);
+    /* Borde para un estilo más definido */
+    border: 2px solid rgba(255, 255, 255, 0.2);
 }
 /* --- Estilos para el Título (h1) --- */
 .columna-izquierda h1 {
-    color: #00aeff; /* Un color dorado para el texto brillante */
+    color: #fff;
     font-size: 2.5em;
-    font-weight: bold;
-    /* Sombra de texto para un efecto de brillo */
-    text-shadow: 0 0 10px #02014d, 0 0 20px #02014d, 0 0 30px #02014d;
+    margin-bottom: 40px; /* Espacio debajo del título de la sección */
+    text-shadow: 0 0 10px #00aeff, 0 0 20px #00aeff, 0 0 30px #00aeff;
+}
+
+.columna-derecha h3 {
+    color: #fff;
+    font-size: 2.5em;
+    margin-bottom: 40px; /* Espacio debajo del título de la sección */
+    text-shadow: 0 0 10px #00aeff, 0 0 20px #00aeff, 0 0 30px #00aeff;
 }
 .columna-izquierda p {
     color: rgb(199, 197, 197); /* Un color dorado para el texto brillante */
     font-size: 1.8em;
     font-weight: bold;
     /* Sombra de texto para un efecto de brillo */
-    text-shadow: 0 0 10px #ffd700, 0 0 20px #ffd700, 0 0 30px #ffd700;
+   
 }
 
 /* --- Estilos para el Contenedor del Video --- */
@@ -314,25 +320,29 @@ section {
 
 /* --- Sección de Juegos --- */
 .seccion-juegos {
+    /* No tiene display: flex, para que el h2 se quede arriba */
+    display: inline-block;
     padding: 25px;
     max-width: 1200px;
     margin: 0 auto;
     text-align: center;
 }
 .seccion-juegos h2 {
+   
     color: #fff;
     font-size: 2.5em;
-    margin-bottom: 40px; /* Espacio debajo del título de la sección */
+    margin-bottom: 40px;
     text-shadow: 0 0 10px #00aeff, 0 0 20px #00aeff, 0 0 30px #00aeff;
 }
 
 .contenedor-juegos {
-    display: flex;
+    display: flex; /* Correcto, porque alinea las tarjetas de juego */
     justify-content: center;
-    align-items: stretch;
-    flex-wrap: wrap; /* Permite que los elementos pasen a la siguiente línea */
-    gap: 40px; /* Espacio entre las tarjetas de juego */
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px;
 }
+
 
 .juego {
     flex: 1 1 300px; /* Un valor flexible para el tamaño de las tarjetas */
@@ -467,4 +477,39 @@ section {
         /* Asegura que el texto esté centrado en ambos bloques */
         text-align: center;
     }
+}
+
+.loader {
+    font-size: 1.2em;
+    color: #00aeff;
+}
+
+#match-history {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.match-card {
+    background-color: #2a2a44;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.match-card.win {
+    border-left: 5px solid #00ff8c;
+}
+
+.match-card.loss {
+    border-left: 5px solid #ff4d4d;
+}
+
+.team-info {
+    font-size: 0.9em;
+    text-align: left;
 }
