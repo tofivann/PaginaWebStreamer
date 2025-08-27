@@ -254,7 +254,7 @@ section {
 }
 
 .seccion-dos-columnas {
-    display: flex; /* Correcto, porque alinea las dos columnas */
+    display: inline-block; /* Correcto, porque alinea las dos columnas */
     justify-content: center;
     align-items: stretch;
     gap: 40px;
@@ -426,6 +426,9 @@ section {
 .spotify-playlists h3 {
     color: #fff;
 }
+ .juego p {
+        font-size: 1.5em;
+    }
 
 @media (max-width: 768px) {
     /* --- Estilos para la Sección de Presentación --- */
@@ -477,5 +480,14 @@ section {
         /* Asegura que el texto esté centrado en ambos bloques */
         text-align: center;
     }
+
+    .juego iframe { /* Selecciona directamente el iframe dentro de .juego */
+        width: 100%; /* El iframe ocupará todo el ancho de la tarjeta */
+        height: auto; /* La altura se ajustará automáticamente */
+        max-height: 250px; /* Puedes poner una altura máxima si quieres evitar videos muy largos */
+        aspect-ratio: 16 / 9; /* Mantiene la relación de aspecto 16:9 de los videos */
+    }
+
+   
 }
 
