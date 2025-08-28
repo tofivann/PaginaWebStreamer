@@ -4,21 +4,43 @@
     box-sizing: border-box;
 }
 
+
 body {
     margin: 0;
-    padding: 0; 
-    font-family: "MedievalSharp", cursive; 
-    background-color: red; /* Este color es un fallback si la imagen no carga */
-    background-image: url('../img/fondo2.png'); 
+    font-family: "MedievalSharp", cursive;
+    background-image: url('../img/fondo2.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    background-position: center bottom;
-    padding-top: 80px; 
+    
+    /* PROPIEDADES CLAVE PARA QUE EL FOOTER FUNCIONE */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
+
+main {
+    /* PROPIEDADES CLAVE PARA QUE EL FOOTER FUNCIONE */
+    flex-grow: 1;
+    
+    /* Mantén el espacio para la barra de navegación */
+    padding-top: 80px;
+}
+
+/* Elimina las propiedades de posición conflictivas del footer */
+footer {
+    background-color: rgba(34, 34, 34, 0.7);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    text-align: center;
+    color: #f5f5f5;
+    font-size: 0.9em;
+    width: 100%;
+}
+
 .pagina-competitivo{
 
-    background-color: red; /* Este color es un fallback si la imagen no carga */
+    background-color: red; 
     background-image: url('../img/fondo3.png'); 
     background-repeat: no-repeat;
     background-size: cover;
@@ -26,7 +48,18 @@ body {
     background-position: center ;
     padding-top: 80px; 
 }
+.pagina-contactos{
 
+    background-color: red; 
+    background-image: url('../img/fondo8.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center ;
+    padding-top: 80px; 
+  
+
+}
 main {
     position: relative;
     top: 80px; 
@@ -118,18 +151,18 @@ section {
     transform: translateY(20px);
     transition: opacity 3s ease, transform 3s ease;
 
-    /* Propiedades de Flexbox para alinear el contenido */
+
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
     
-    /* Elimina el padding superior para pegar la imagen al borde */
+    
     padding: 0 20px;
 }
 
 #contenido-index.visible {
-    /* Estado final: visible y en su lugar */
+
     opacity: 1;
     transform: translateY(0);
 }
@@ -230,8 +263,8 @@ section {
 
     }
     #main-opciones li {
-        margin-right: 0; /* Asegúrate de que no haya margen horizontal en móviles */
-        margin-bottom: 25px; /* Crea un espacio de 25px entre cada opción */
+        margin-right: 0; 
+        margin-bottom: 25px; 
     }
     
     section {
@@ -257,7 +290,7 @@ section {
 }
 
 .seccion-dos-columnas {
-    display: block; /* Correcto, porque alinea las dos columnas */
+    display: block;
     justify-content: center;
     align-items: stretch;
     gap: 40px;
@@ -267,19 +300,19 @@ section {
 
 /* --- Estilos para las Columnas --- */
 .columna-izquierda {
-    flex: 1; /* Ocupan el mismo ancho */
+    flex: 1;
     padding: 20px;
     border-radius: 10px;
-    /* Sombras para dar un efecto de profundidad */
+   
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
     text-align: center;
     align-self: center;
 }
 
 .columna-izquierda {
-    /* Fondo oscuro y semitransparente */
+  
     background-color: rgba(0, 0, 0, 0.6);
-    /* Borde para un estilo más definido */
+
     border: 2px solid rgba(255, 255, 255, 0.2);
 }
 
@@ -288,23 +321,23 @@ section {
 .columna-izquierda h1 {
     color: #fff;
     font-size: 2.5em;
-    margin-bottom: 40px; /* Espacio debajo del título de la sección */
+    margin-bottom: 40px;
     text-shadow: 0 0 10px #00aeff, 0 0 20px #00aeff, 0 0 30px #00aeff;
 }
 
 
 .columna-izquierda p {
-    color: rgb(199, 197, 197); /* Un color dorado para el texto brillante */
+    color: rgb(199, 197, 197); 
     font-size: 1.8em;
     font-weight: bold;
-    /* Sombra de texto para un efecto de brillo */
    
+
 }
 
 
 /* --- Sección de Juegos --- */
 .seccion-juegos {
-    /* No tiene display: flex, para que el h2 se quede arriba */
+    
     display: block;
     padding: 25px;
    
@@ -320,7 +353,7 @@ section {
 }
 
 .contenedor-juegos {
-    display: flex; /* Correcto, porque alinea las tarjetas de juego */
+    display: flex; 
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
@@ -332,7 +365,7 @@ section {
 
 
 .juego {
-    flex: 1 1 300px; /* Un valor flexible para el tamaño de las tarjetas */
+    flex: 1 1 300px; 
     background-color: rgba(0, 0, 0, 0.6);
     border: 2px solid rgba(255, 255, 255, 0.2);
     border-radius: 10px;
@@ -385,11 +418,11 @@ section {
 .contenedor-musica {
     display: flex;
     justify-content: center;
-    align-items: stretch; /* Esto hace que los hijos tengan la misma altura */
+    align-items: stretch; 
     gap: 40px;
 }
 
-/* El h2 dentro de seccion-musica no necesita ser un bloque por si solo, mejor que ocupe todo el ancho */
+
 .seccion-musica h2 {
     background-color: rgba(0, 0, 0, 0.6);
     border-radius: 10px;
@@ -403,7 +436,7 @@ section {
 
 .bateria,
 .spotify-playlists {
-    flex: 1; /* Esto asegura que ambos contenedores ocupen el mismo ancho */
+    flex: 1; 
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
@@ -420,7 +453,7 @@ section {
     background-color: transparent;
     display: flex;
     flex-direction: column;
-    /* La altura del contenedor padre lo determinará su hermano (.bateria) */
+  
 }
 
 .bateria img {
@@ -435,10 +468,14 @@ section {
     font-size: 2.5em;
     text-shadow: 0 0 10px #00aeff, 0 0 20px #00aeff, 0 0 30px #00aeff;
 }
+.spotify-playlists p {
+
+    font-size: 1.5em;
+}
 
 .spotify-playlists iframe {
     flex-grow: 1;
-    height: auto; /* <-- ¡Este es el cambio clave! */
+    height: auto;
     border-radius: 12px;
 }
  .juego p {
@@ -446,17 +483,19 @@ section {
     }
 
 @media (max-width: 768px) {
-    /* --- Estilos para la Sección de Presentación --- */
+
     .seccion-dos-columnas {
         flex-direction: column;
         padding: 20px;
         gap: 20px;
-        max-height: none; /* Elimina la altura máxima en móviles */
+
+        max-height: none; 
     }
 
     .columna-izquierda{
+
         width: 100%;
-        /* Alinea el texto al centro */
+
         text-align: center;
         align-self: auto;
     }
@@ -477,8 +516,7 @@ section {
     
     .juego {
         width: 100%;
-        flex-basis: auto; /* Permite que el ancho se ajuste automáticamente */
-        /* Asegura que el texto dentro de la tarjeta esté centrado */
+        flex-basis: auto; 
         text-align: center;
         padding: 20px;
     }
@@ -492,7 +530,7 @@ section {
     .bateria,
     .spotify-playlists {
         width: 100%;
-        /* Asegura que el texto esté centrado en ambos bloques */
+     
         text-align: center;
     }
 
@@ -504,9 +542,10 @@ section {
    
 }
 }
+
 .pagina-cursos{
 
-    background-color: red; /* Este color es un fallback si la imagen no carga */
+    background-color: red; 
     background-image: url('../img/fondo6.png'); 
     background-repeat: no-repeat;
     background-size: cover;
@@ -518,9 +557,9 @@ section {
 .carrusel-contenedor {
     position: relative;
     width: 100%;
-    max-width: 450px; /* Tamaño máximo para que se vea bien */
+    max-width: 450px;
     margin: 0 auto 20px;
-    overflow: hidden; /* Oculta las imágenes que no están visibles */
+    overflow: hidden; 
     border-radius: 10px;
 }
 
@@ -580,4 +619,117 @@ section {
 
 .bateria p {
     font-size: 1.5em;
+}
+
+
+/* Estilos generales del formulario */
+.seccion-contacto {
+    display: block;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 40px;
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    color: white;
+    text-align: center;
+    height: 80vh; 
+    overflow: hidden; 
+ 
+}
+
+.seccion-contacto h2 {
+    text-shadow: 0 0 10px #00aeff, 0 0 20px #68bce4;
+}
+
+.seccion-contacto form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    
+
+}
+
+.seccion-contacto label {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.seccion-contacto input,
+.seccion-contacto textarea {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    font-size: 1em;
+}
+
+.seccion-contacto textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.seccion-contacto button {
+    padding: 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2em;
+    transition: background-color 0.3s ease;
+}
+
+.seccion-contacto button:hover {
+    background-color: #0056b3;
+}
+
+
+/* Estilos para la sección de iconos de redes sociales */
+.social-links-contacto {
+    margin-top: 30px;
+    text-align: center;
+    width: 100%;
+    padding-top: 20px;
+}
+
+.iconos-redes {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 15px;
+}
+
+.iconos-redes a {
+    color: white;
+    font-size: 2.5em;
+    transition: color 0.3s ease;
+}
+
+.iconos-redes a:hover {
+    color: #007bff;
+}
+
+.footer-contenido {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-contenido p {
+    margin: 5px 0;
+}
+
+.footer-contenido a {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-contenido a:hover {
+    color: #f5f5f5;
+    text-decoration: underline;
 }

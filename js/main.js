@@ -7,7 +7,7 @@ const menuItems= [
     {
     text: "Musica", url: 'musica.html'
     },
-    {text: "Contactos", url: 'Contactos.html'}
+    {text: "Contactos", url: 'contactos.html'}
 
 
 ]
