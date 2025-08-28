@@ -65,5 +65,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Añade la clase 'visible' para activar la transición
     contenidoIndex.classList.add('visible');
+
+   
    
 });

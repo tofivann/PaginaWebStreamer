@@ -43,3 +43,4 @@ document.addEventListener('DOMContentLoaded', () => {
         actualizarCarrusel();
     }, 5000); // Cambia de imagen cada 5 segundos
 });
+

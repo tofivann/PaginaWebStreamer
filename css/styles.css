@@ -192,16 +192,23 @@ section {
 
 /* --- Media Queries (Móvil) --- */
 @media (max-width: 768px) {
-    /* Oculta las opciones de escritorio y muestra el botón de hamburguesa */
-    .menu-container {
-        display: none;
+    nav {
+        padding: 10px 20px;
+    }
+
+    .menu-wrapper {
+        flex-direction: column;
+        align-items: center;
     }
 
     .menu-toggle {
         display: block;
     }
 
-    /* Estilos para el menú cuando está visible */
+    .menu-container {
+        display: none;
+    }
+
     .menu-container.visible {
         display: block;
         position: absolute;
@@ -220,10 +227,11 @@ section {
         align-items: center;
         width: 100%;
         padding: 20px 0;
+
     }
     #main-opciones li {
-        margin-right: 0; 
-        margin-bottom: 25px; 
+        margin-right: 0; /* Asegúrate de que no haya margen horizontal en móviles */
+        margin-bottom: 25px; /* Crea un espacio de 25px entre cada opción */
     }
     
     section {
