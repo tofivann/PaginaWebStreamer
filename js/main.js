@@ -3,7 +3,7 @@ const menuOpciones = document.getElementById("main-opciones");
 const menuItems= [
 
     {text: "Inicio" , url: 'index.html'},
-    {text: "Competitivo", url: 'competitivo.html'},
+    {text: "Juegos", url: 'competitivo.html'},
     {
     text: "Cursos", url: 'cursos.html'
     },
