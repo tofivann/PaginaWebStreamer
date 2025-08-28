@@ -381,58 +381,65 @@ section {
     max-width: 1200px;
     margin: 0 auto;
 }
+
 .contenedor-musica {
     display: flex;
     justify-content: center;
-    align-items: stretch; /* Estira las columnas para que tengan la misma altura */
+    align-items: stretch; /* Esto hace que los hijos tengan la misma altura */
     gap: 40px;
 }
-.seccion-musica h2{
-background-color: rgba(0, 0, 0, 0.6);
-border-radius: 10px;
-box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-padding: 20px;
-}
 
-.bateria,
-.spotify-playlists {
-    flex: 1;
-    padding: 20px;
+/* El h2 dentro de seccion-musica no necesita ser un bloque por si solo, mejor que ocupe todo el ancho */
+.seccion-musica h2 {
+    background-color: rgba(0, 0, 0, 0.6);
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-}
-
-.bateria {
-    /* Fondo oscuro y semitransparente para la columna de la batería */
-    background-color: rgba(0, 0, 0, 0.6);
-    border: 2px solid rgba(255, 255, 255, 0.2);
-    text-align: center;
-    color: white;
-}
-
-.spotify-playlists {
-    /* Columna del reproductor de Spotify con fondo transparente */
-    background-color: transparent;
-    border: 2px solid rgba(255, 255, 255, 0.2);
-    text-align: center;
-    color: white;
-}
-
-.bateria img {
-    max-width: 100%; /* Asegura que la imagen no se desborde */
-    height: auto;
-    border-radius: 8px;
-}
-
-.seccion-musica h2 {
+    padding: 20px;
     color: #fff;
     text-align: center;
     font-size: 2.5em;
     text-shadow: 0 0 10px #00aeff, 0 0 20px #00aeff, 0 0 30px #00aeff;
 }
 
+.bateria,
+.spotify-playlists {
+    flex: 1; /* Esto asegura que ambos contenedores ocupen el mismo ancho */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    text-align: center;
+    color: white;
+}
+
+.bateria {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.spotify-playlists {
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    /* La altura del contenedor padre lo determinará su hermano (.bateria) */
+}
+
+.bateria img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
 .spotify-playlists h3 {
     color: #fff;
+    text-align: center;
+    font-size: 2.5em;
+    text-shadow: 0 0 10px #00aeff, 0 0 20px #00aeff, 0 0 30px #00aeff;
+}
+
+.spotify-playlists iframe {
+    flex-grow: 1;
+    height: auto; /* <-- ¡Este es el cambio clave! */
+    border-radius: 12px;
 }
  .juego p {
         font-size: 1.5em;
