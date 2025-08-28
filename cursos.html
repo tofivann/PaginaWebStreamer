@@ -1,13 +1,80 @@
-<section class="seccion-musica">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="pagina-cursos">
+    <header>
+             <nav>
+            <div>
+                <img src="img/logo-nucleo.png" alt="logo nucleo" width="120" style="transform: rotate(-15deg);">
+            </div>
+
+            <div class="menu-wrapper">
+                <button class="menu-toggle" id="menu-toggle">
+                    <i class="bi bi-list"></i>
+                </button>
+            
+             
+            <div class="menu-container">
+                <ul id="main-opciones">
+                </ul>
+            </div>
+            </div>      
+
+            <div class="menu-container-redes">
+                <ul id="main-redes">
+                    <li><a href="https://www.instagram.com/lecundofadesma/?hl=es-la"><i class="bi bi-instagram"></i></a></li>
+                </ul>
+            </div>
+        </nav>
+    
+    </header>
+    <main>
+
+<section class="seccion-musica animated-section">
     <h2>El Ritmo También me mueve</h2>
     <div class="contenedor-musica">
         <div class="bateria">
-            <img src="/img/streamer-tocando-bateria.jpg" alt="imagen tocando batería">
-            <p>Cuando no estamos en el mundo virtual, la pasión por la música toma el control. ¡Descubre el lado musical de nuestro streamer!</p>
+    <h2>Mi Lado Musical</h2>
+    <div class="carrusel-contenedor">
+            <div class="carrusel-imagenes">
+                <img src="/img/nucleo-bateria1.png" alt="imagen 1 de batería">
+                <img src="/img/nucleoimagen2.png" alt="imagen 2 de batería">
+                <img src="/img/nucleoimagen3.png" alt="imagen 3 de batería">
+                <img src="/img/nucleoimagen4.png" alt="imagen 4 de batería">
+            </div>
+            <button class="carrusel-btn prev">&lt;</button>
+            <button class="carrusel-btn next">&gt;</button>
+    </div>
+        <div class="carrusel-puntos">
+            <span class="punto activo"></span>
+            <span class="punto"></span>
+            <span class="punto"></span>
+            <span class="punto"></span>
+
         </div>
+    <p>Cuando no estamos en el mundo virtual, la pasión por la música toma el control. ¡Descubre el lado musical de nuestro streamer!</p>
+    </div>
         <div class="spotify-playlists">
             <h3>Escucha mis canciones</h3>
             <iframe style="border-radius:12px" src="[https://open.spotify.com/embed/playlist/TU_PLAYLIST_ID?utm_source=generator](https://open.spotify.com/embed/playlist/TU_PLAYLIST_ID?utm_source=generator)" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
             </div>
     </div>
 </section>
+    </main>
+    <footer>
+
+
+    </footer>
+    <script src="js/main.js"></script>
+    <script src="js/competitivo.js"></script>
+    <script src="js/carrusel.js"></script>
+
+
+    </script>
+</body>
+</html>

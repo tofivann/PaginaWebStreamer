@@ -266,8 +266,7 @@ section {
 }
 
 /* --- Estilos para las Columnas --- */
-.columna-izquierda,
-.columna-derecha {
+.columna-izquierda {
     flex: 1; /* Ocupan el mismo ancho */
     padding: 20px;
     border-radius: 10px;
@@ -284,12 +283,7 @@ section {
     border: 2px solid rgba(255, 255, 255, 0.2);
 }
 
-.columna-derecha {
-  /* Fondo oscuro y semitransparente */
-    background-color: rgba(0, 0, 0, 0.6);
-    /* Borde para un estilo más definido */
-    border: 2px solid rgba(255, 255, 255, 0.2);
-}
+
 /* --- Estilos para el Título (h1) --- */
 .columna-izquierda h1 {
     color: #fff;
@@ -298,26 +292,13 @@ section {
     text-shadow: 0 0 10px #00aeff, 0 0 20px #00aeff, 0 0 30px #00aeff;
 }
 
-.columna-derecha h3 {
-    color: #fff;
-    font-size: 2.5em;
-    margin-bottom: 40px; /* Espacio debajo del título de la sección */
-    text-shadow: 0 0 10px #00aeff, 0 0 20px #00aeff, 0 0 30px #00aeff;
-}
+
 .columna-izquierda p {
     color: rgb(199, 197, 197); /* Un color dorado para el texto brillante */
     font-size: 1.8em;
     font-weight: bold;
     /* Sombra de texto para un efecto de brillo */
    
-}
-
-/* --- Estilos para el Contenedor del Video --- */
-#reproductor-twitch {
-    /* Esto es crucial para que el video se adapte a su espacio */
-    width: 100%;
-    /* Mantén una relación de aspecto 16:9, ideal para videos */
-    aspect-ratio: 16 / 9;
 }
 
 
@@ -378,22 +359,24 @@ section {
     font-size: 1em;
 }
 
+/*animacion*/
 .animated-section {
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 3s ease, transform 3s ease;
-    /* La animación no se activará hasta que la clase 'visible' sea añadida */
+
 }
 
-/* Esta clase es la que activa la animación */
+
 .animated-section.visible {
     opacity: 1;
     transform: translateY(0);
 }
 
+
 /* --- Sección de Música --- */
 .seccion-musica {
-    
+    display: block;
     padding: 25px;
     max-width: 1200px;
     margin: 0 auto;
@@ -403,6 +386,12 @@ section {
     justify-content: center;
     align-items: stretch; /* Estira las columnas para que tengan la misma altura */
     gap: 40px;
+}
+.seccion-musica h2{
+background-color: rgba(0, 0, 0, 0.6);
+border-radius: 10px;
+box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+padding: 20px;
 }
 
 .bateria,
@@ -458,8 +447,7 @@ section {
         max-height: none; /* Elimina la altura máxima en móviles */
     }
 
-    .columna-izquierda,
-    .columna-derecha {
+    .columna-izquierda{
         width: 100%;
         /* Alinea el texto al centro */
         text-align: center;
@@ -501,13 +489,85 @@ section {
         text-align: center;
     }
 
-    .juego iframe { /* Selecciona directamente el iframe dentro de .juego */
-        width: 100%; /* El iframe ocupará todo el ancho de la tarjeta */
-        height: auto; /* La altura se ajustará automáticamente */
-        max-height: 250px; /* Puedes poner una altura máxima si quieres evitar videos muy largos */
-        aspect-ratio: 16 / 9; /* Mantiene la relación de aspecto 16:9 de los videos */
-    }
-
+    .juego iframe { 
+        width: 100%; 
+        height: auto; 
+        max-height: 250px; 
+        aspect-ratio: 16 / 9; 
    
+}
+}
+.pagina-cursos{
+
+    background-color: red; /* Este color es un fallback si la imagen no carga */
+    background-image: url('../img/fondo6.png'); 
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center ;
+    padding-top: 50px; 
+}
+/* Estilos para el contenedor del carrusel */
+.carrusel-contenedor {
+    position: relative;
+    width: 100%;
+    max-width: 450px; /* Tamaño máximo para que se vea bien */
+    margin: 0 auto 20px;
+    overflow: hidden; /* Oculta las imágenes que no están visibles */
+    border-radius: 10px;
+}
+
+/* Estilos para el contenedor de imágenes */
+.carrusel-imagenes {
+    display: flex;
+    transition: transform 0.5s ease-in-out; /* Suaviza la transición */
+}
+
+.carrusel-imagenes img {
+    width: 100%;
+    display: block;
+    flex-shrink: 0;
+    object-fit: cover;
+}
+
+/* Estilos para los botones de navegación */
+.carrusel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.carrusel-btn.prev {
+    left: 10px;
+}
+
+.carrusel-btn.next {
+    right: 10px;
+}
+
+/* Estilos para los puntos de navegación */
+.carrusel-puntos {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.punto {
+    height: 15px;
+    width: 15px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.punto.activo {
+    background-color: #717171;
 }
 
