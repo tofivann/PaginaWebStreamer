@@ -134,6 +134,8 @@ section {
     transform: translateY(0);
 }
 
+
+
 /* --- Estilos de la Animación de Ola --- */
 @keyframes latido {
     0%, 100% {
@@ -186,6 +188,7 @@ section {
 #boton-index i {
     margin-right: 5px;
 }
+
 
 /* --- Media Queries (Móvil) --- */
 @media (max-width: 768px) {
@@ -254,7 +257,7 @@ section {
 }
 
 .seccion-dos-columnas {
-    display: inline-block; /* Correcto, porque alinea las dos columnas */
+    display: block; /* Correcto, porque alinea las dos columnas */
     justify-content: center;
     align-items: stretch;
     gap: 40px;
@@ -321,9 +324,9 @@ section {
 /* --- Sección de Juegos --- */
 .seccion-juegos {
     /* No tiene display: flex, para que el h2 se quede arriba */
-    display: inline-block;
+    display: block;
     padding: 25px;
-    max-width: 1200px;
+   
     margin: 0 auto;
     text-align: center;
 }
@@ -341,6 +344,9 @@ section {
     align-items: center;
     flex-wrap: wrap;
     gap: 40px;
+   
+    
+   
 }
 
 
@@ -370,6 +376,19 @@ section {
 
 .juego p {
     font-size: 1em;
+}
+
+.animated-section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 3s ease, transform 3s ease;
+    /* La animación no se activará hasta que la clase 'visible' sea añadida */
+}
+
+/* Esta clase es la que activa la animación */
+.animated-section.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 /* --- Sección de Música --- */
@@ -466,6 +485,7 @@ section {
         flex-basis: auto; /* Permite que el ancho se ajuste automáticamente */
         /* Asegura que el texto dentro de la tarjeta esté centrado */
         text-align: center;
+        padding: 20px;
     }
 
     /* --- Estilos para la Sección de Música --- */
