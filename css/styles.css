@@ -419,7 +419,7 @@ section {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
     color: white;
     text-align: center;
-    overflow: hidden; 
+   
  
 }
 
@@ -515,10 +515,4 @@ section {
 .footer-contenido a:hover {
     color: #f5f5f5;
     text-decoration: underline;
-}
-.todo-el-contenido{
-    display: grid;
-    min-height: 100dhv;
-    grid-template-rows: auto 1fr;
-
 }
