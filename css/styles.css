@@ -13,21 +13,20 @@ body {
     background-size: cover;
     background-attachment: fixed;
     
-    /* PROPIEDADES CLAVE PARA QUE EL FOOTER FUNCIONE */
+  
     display: flex;
     flex-direction: column;
     min-height: 100vh;
 }
 
 main {
-    /* PROPIEDADES CLAVE PARA QUE EL FOOTER FUNCIONE */
+ 
     flex-grow: 1;
     
-    /* Mantén el espacio para la barra de navegación */
+  
     padding-top: 80px;
 }
 
-/* Elimina las propiedades de posición conflictivas del footer */
 footer {
     background-color: rgba(34, 34, 34, 0.7);
     backdrop-filter: blur(10px);
@@ -127,9 +126,9 @@ nav {
     display: none;
 }
 
-/* --- Sección Principal (Contenido) --- */
+/* --- Sección Principal --- */
 section {
-    height: 100dvh;
+    height: 100vh;
     width: 100%;
     display: flex;
     align-items: center;
@@ -138,7 +137,7 @@ section {
 }
 
 #contenido-index {
-    /* Estado inicial: oculto y con transición */
+   
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 3s ease, transform 3s ease;
@@ -403,73 +402,7 @@ section {
     background-position: center ;
     padding-top: 50px; 
 }
-/* Estilos para el contenedor del carrusel */
-.carrusel-contenedor {
-    position: relative;
-    width: 100%;
-    max-width: 450px;
-    margin: 0 auto 20px;
-    overflow: hidden; 
-    border-radius: 10px;
-}
 
-/* Estilos para el contenedor de imágenes */
-.carrusel-imagenes {
-    display: flex;
-    transition: transform 0.5s ease-in-out; /* Suaviza la transición */
-}
-
-.carrusel-imagenes img {
-    width: 100%;
-    display: block;
-    flex-shrink: 0;
-    object-fit: cover;
-}
-
-/* Estilos para los botones de navegación */
-.carrusel-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    z-index: 10;
-}
-
-.carrusel-btn.prev {
-    left: 10px;
-}
-
-.carrusel-btn.next {
-    right: 10px;
-}
-
-/* Estilos para los puntos de navegación */
-.carrusel-puntos {
-    text-align: center;
-    margin-top: 10px;
-}
-
-.punto {
-    height: 15px;
-    width: 15px;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-    margin: 0 5px;
-    cursor: pointer;
-}
-
-.punto.activo {
-    background-color: #717171;
-}
-
-.bateria p {
-    font-size: 1.5em;
-}
 
 
 /* Estilos generales del formulario */
