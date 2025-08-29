@@ -278,8 +278,8 @@ footer {
 @media (max-width: 768px) {
     /* Fondo de la página de música */
     .pagina-musica {
-        background-position: -75px center;
-        background-attachment: scroll;
+        background-position: -150px center;
+       
     }
 
     /* Navegación */
