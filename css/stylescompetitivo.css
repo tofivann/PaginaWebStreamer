@@ -8,7 +8,10 @@
 body {
     margin: 0;
     font-family: "MedievalSharp", cursive;
-   
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    background-position: center;
     
 
     /* Propiedades para un footer fijo en la parte inferior de la página */
@@ -25,7 +28,7 @@ main {
 /* --- Estilos de la Página Competitiva --- */
 .pagina-competitivo {
     background-color: red;
-   
+    background-image: url('../img/fondo3.png');
   
 }
 

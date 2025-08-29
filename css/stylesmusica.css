@@ -30,7 +30,7 @@ main {
   
     background-position: center;
 
-    background-attachment: scroll;
+    background-attachment: fixed;
   
 }
 
