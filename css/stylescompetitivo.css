@@ -236,6 +236,7 @@ footer {
     .columna-izquierda p {
         font-size: 1.2em;
     }
+    
 }
 /* --- Sección de Juegos --- */
 .seccion-juegos {
@@ -243,6 +244,7 @@ footer {
     padding: 25px;
     margin: 0 auto;
     text-align: center;
+
 }
 
 .seccion-juegos h2 {
@@ -278,7 +280,8 @@ footer {
 }
 
 .juego p {
-    font-size: 1em;
+     font-size: 1.8em;
+    font-weight: bold;
 }
 
 .juego iframe {
