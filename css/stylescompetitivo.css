@@ -10,9 +10,10 @@ body {
     font-family: "MedievalSharp", cursive;
     background-repeat: no-repeat;
     background-size: cover;
-    background-attachment: fixed;
+
     background-position: center;
     
+    background-attachment: scroll; 
     /* Propiedades para un footer fijo en la parte inferior de la página */
     display: flex;
     flex-direction: column;
