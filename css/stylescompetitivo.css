@@ -29,7 +29,7 @@ main {
 .pagina-competitivo {
     background-color: red;
     background-image: url('../img/fondo3.png');
-    background-attachment: fixed;
+  
 }
 
 .seccion-presentacion-competitivo {
