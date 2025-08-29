@@ -28,7 +28,8 @@ main {
     background-image: url('../img/fondo6.png'); 
     background-color: red; 
   
-  
+    background-position: center;
+
     background-attachment: scroll;
   
 }
@@ -289,6 +290,13 @@ footer {
         width: 100%;
         text-align: center;
     }
+    .pagina-musica {
+  
+    background-position: -75px;
+
+    background-attachment: scroll;
+  
+}
 }
 
 @media (max-width: 768px) {
