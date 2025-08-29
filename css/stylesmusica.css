@@ -12,8 +12,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
    
-    background-attachment: scroll; 
-    
+
     /* Propiedades para que el footer funcione */
     display: flex;
     flex-direction: column;

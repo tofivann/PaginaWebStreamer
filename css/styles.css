@@ -12,7 +12,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
 
-    background-attachment: scroll; 
+  
     /* PROPIEDADES CLAVE PARA QUE EL FOOTER FUNCIONE */
     display: flex;
     flex-direction: column;
