@@ -10,10 +10,8 @@ body {
     font-family: "MedievalSharp", cursive;
     background-repeat: no-repeat;
     background-size: cover;
-
     background-position: center;
     
-
     /* Propiedades para un footer fijo en la parte inferior de la página */
     display: flex;
     flex-direction: column;
@@ -28,8 +26,8 @@ main {
 /* --- Estilos de la Página Competitiva --- */
 .pagina-competitivo {
     background-color: red;
-    background-image: url('../img/fondo3.png');
-  
+    /* Elimina la imagen de fondo de aquí para usar el pseudo-elemento */
+    /* background-image: url('../img/fondo3.png'); */
 }
 
 .seccion-presentacion-competitivo {
@@ -174,8 +172,82 @@ footer {
     text-decoration: underline;
 }
 
-/* Media Queries (Móvil) */
+/* --- Sección de Juegos --- */
+.seccion-juegos {
+    display: block;
+    padding: 25px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.seccion-juegos h2 {
+    color: #fff;
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    text-shadow: 0 0 10px #00aeff, 0 0 20px #00aeff, 0 0 30px #00aeff;
+}
+
+.contenedor-juegos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.juego {
+    flex: 1 1 300px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    color: white;
+    text-align: center;
+}
+
+.juego h3 {
+    color: #ffd700;
+    font-size: 1.8em;
+    margin-top: 0;
+}
+
+.juego p {
+    font-size: 1.8em;
+    font-weight: bold;
+}
+
+.juego iframe {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    border-radius: 8px;
+}
+
+/* La mejor manera de simular un fondo fijo */
+.fixed-background-container {
+    position: relative;
+    z-index: 1;
+    min-height: 100vh;
+}
+
+.fixed-background-container::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-image: url('../img/fondo3.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+/* --- Media Queries (Móvil) --- */
 @media (max-width: 768px) {
+    /* Navegación */
     nav {
         padding: 10px 20px;
     }
@@ -218,6 +290,7 @@ footer {
         margin-bottom: 25px;
     }
 
+    /* Secciones de Contenido */
     .seccion-presentacion-competitivo {
         flex-direction: column;
         padding: 20px;
@@ -237,63 +310,7 @@ footer {
     .columna-izquierda p {
         font-size: 1.2em;
     }
-    
-}
-/* --- Sección de Juegos --- */
-.seccion-juegos {
-    display: block;
-    padding: 25px;
-    margin: 0 auto;
-    text-align: center;
 
-}
-
-.seccion-juegos h2 {
-    color: #fff;
-    font-size: 2.5em;
-    margin-bottom: 40px;
-    text-shadow: 0 0 10px #00aeff, 0 0 20px #00aeff, 0 0 30px #00aeff;
-}
-
-.contenedor-juegos {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 40px;
-}
-
-.juego {
-    flex: 1 1 300px;
-    background-color: rgba(0, 0, 0, 0.6);
-    border: 2px solid rgba(255, 255, 255, 0.2);
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-    color: white;
-    text-align: center;
-}
-
-.juego h3 {
-    color: #ffd700;
-    font-size: 1.8em;
-    margin-top: 0;
-}
-
-.juego p {
-     font-size: 1.8em;
-    font-weight: bold;
-}
-
-.juego iframe {
-    width: 100%;
-    height: auto;
-    aspect-ratio: 16 / 9;
-    border-radius: 8px;
-}
-
-/* Media Queries (Móvil) para la sección de juegos */
-@media (max-width: 768px) {
     .contenedor-juegos {
         flex-direction: column;
         gap: 20px;
@@ -305,28 +322,4 @@ footer {
         text-align: center;
         padding: 20px;
     }
-}
-
-/* El contenedor principal debe tener posición relativa para el z-index */
-.fixed-background-container {
-    position: relative;
-    z-index: 1;
-    /* Asegura que el contenedor abarque toda la altura */
-    min-height: 100vh;
-}
-
-.fixed-background-container::before {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1; /* Envía el pseudo-elemento al fondo */
-
-    /* Aplica tus estilos de fondo aquí */
-    background-image: url('../img/fondo3.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
 }

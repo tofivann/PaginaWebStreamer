@@ -46,7 +46,7 @@ footer {
     background-image: url('../img/fondo8.png');
     background-repeat: no-repeat;
     background-size: cover;
-    background-attachment: scroll;
+    background-attachment: fixed;
     background-position: center ;
     padding-top: 80px; 
   
@@ -391,17 +391,6 @@ section {
      
         text-align: center;
     }
-}
-
-.pagina-cursos{
-
-    background-color: red; 
-    background-image: url('../img/fondo6.png'); 
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center ;
-    padding-top: 50px; 
 }
 
 
