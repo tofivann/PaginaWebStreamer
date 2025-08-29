@@ -27,7 +27,9 @@ main {
 .pagina-musica {
     background-image: url('../img/fondo6.png'); 
     background-color: red; 
-
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 /* --- Navegación --- */
