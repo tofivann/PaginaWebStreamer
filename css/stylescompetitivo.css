@@ -8,10 +8,7 @@
 body {
     margin: 0;
     font-family: "MedievalSharp", cursive;
-    background-repeat: no-repeat;
-    background-size: cover;
-
-    background-position: center;
+   
     
 
     /* Propiedades para un footer fijo en la parte inferior de la página */
@@ -28,7 +25,7 @@ main {
 /* --- Estilos de la Página Competitiva --- */
 .pagina-competitivo {
     background-color: red;
-    background-image: url('../img/fondo3.png');
+   
   
 }
 
@@ -325,7 +322,7 @@ footer {
     z-index: -1; /* Envía el pseudo-elemento al fondo */
 
     /* Aplica tus estilos de fondo aquí */
-    background-image: url('../img/tu-imagen-de-fondo.png');
+    background-image: url('../img/fondo3.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
