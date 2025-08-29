@@ -13,20 +13,21 @@ body {
     background-size: cover;
     background-attachment: fixed;
     
-  
+    /* PROPIEDADES CLAVE PARA QUE EL FOOTER FUNCIONE */
     display: flex;
     flex-direction: column;
     min-height: 100vh;
 }
 
 main {
- 
+    /* PROPIEDADES CLAVE PARA QUE EL FOOTER FUNCIONE */
     flex-grow: 1;
     
-  
+    /* Mantén el espacio para la barra de navegación */
     padding-top: 80px;
 }
 
+/* Elimina las propiedades de posición conflictivas del footer */
 footer {
     background-color: rgba(34, 34, 34, 0.7);
     backdrop-filter: blur(10px);
@@ -126,7 +127,7 @@ nav {
     display: none;
 }
 
-/* --- Sección Principal --- */
+/* --- Sección Principal (Contenido) --- */
 section {
     height: 100vh;
     width: 100%;
@@ -137,7 +138,7 @@ section {
 }
 
 #contenido-index {
-   
+    /* Estado inicial: oculto y con transición */
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 3s ease, transform 3s ease;
@@ -418,7 +419,6 @@ section {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
     color: white;
     text-align: center;
-    height: 80vh; 
     overflow: hidden; 
  
 }
