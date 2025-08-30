@@ -26,8 +26,8 @@ main {
 /* --- Estilos de la Página Competitiva --- */
 .pagina-competitivo {
     background-color: red;
-    /* Elimina la imagen de fondo de aquí para usar el pseudo-elemento */
-    /* background-image: url('../img/fondo3.png'); */
+
+     background-image: url('../img/fondo3.png'); */
 }
 
 .seccion-presentacion-competitivo {
@@ -224,26 +224,6 @@ footer {
     border-radius: 8px;
 }
 
-/* La mejor manera de simular un fondo fijo */
-.fixed-background-container {
-    position: relative;
-    z-index: 1;
-    min-height: 100vh;
-}
-
-.fixed-background-container::before {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    background-image: url('../img/fondo3.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-}
 
 /* --- Media Queries (Móvil) --- */
 @media (max-width: 768px) {
@@ -251,7 +231,9 @@ footer {
     nav {
         padding: 10px 20px;
     }
-
+    .pagina-competitivo {
+        background-position: 60% center;
+    }
     .menu-wrapper {
         flex-direction: column;
         align-items: center;
